@@ -1,0 +1,328 @@
+#wpadminbar {
+	display: none;
+}
+
+html { 
+	margin: 0 !important; 
+}
+
+body { 
+	background: #ddd;
+	z-index: 1;
+}
+
+.action-bar {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	width: 50px;
+}
+.action-icon {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	font-size: 30px;
+	text-align: center;
+	cursor: pointer;
+}
+.action-print {
+	font-size: 30px;
+	text-align: center;
+	vertical-align: middle;
+}
+.print-tooltip { 
+	position: absolute;
+	top: 0;
+	left: 45px;
+	white-space: nowrap;
+	opacity: .8;
+	font-size: 24px;
+	line-height: 50px;
+	padding: 0 15px 0 20px;
+	border-radius: 0 5px 5px 0;
+}
+.active-button {
+	opacity: .8;
+}
+.print-wrapper { 
+	margin: 20px auto; 
+	max-width: 19.05cm;
+	padding: 1.27cm; 
+	background: #fff; 
+}
+#pdf-wrapper {
+	max-width: 19.05cm;
+	position: relative;
+}
+.photo-wrapper { 
+	width: 50%; 
+	margin: 0 0 0 30px; 
+	float: right; 
+	height: auto; 
+}
+.story-body-wrapper p { 
+	position: relative;
+	margin-bottom: 15px; 
+	font-size: 12px; 
+	line-height: 18px; 
+}
+.edit-mode .story-body-wrapper > p:hover, .edit-mode .story-body-wrapper > .print-image:hover {
+	background: #eee;
+}
+p, p .remove {
+	transition: background .3s ease-in-out, border .3s ease-in-out;
+}
+.edit-mode .story-body-wrapper > .print-image:hover .remove {
+	background: #eee;
+	border: 1px solid #ddd;
+	border-right: none;
+}
+p.printdeck {
+	margin-bottom: 30px; 
+	font-size: 24px;
+	line-height: 32px;
+	position: relative; 
+}
+.edit-mode p.printdeck:hover {
+	background: #eee;
+	cursor: default;
+}
+div.printbyline { 
+	margin-bottom: 20px; 
+	font-size: 14px;
+	line-height: 21px;
+	position: relative;
+}
+p.story-data {
+	font-size: 12px;
+	text-align: right;
+}
+p.printphotographer { 
+	text-align: right; 
+	margin-top: 10px; 
+	margin-bottom: 0; 
+}
+p.printcaption, .wp-caption p.wp-caption-text { 
+	margin-top: 10px; 
+	margin-bottom: 0; 
+	font-size: 12px;
+	line-height: 16px;
+}
+.alignleft { 
+	margin: 0px 20px 20px 0 !important;
+	position: relative; 
+	border: 1px solid transparent;
+	float: left;
+	z-index: 1;
+}
+.alignright { 
+	margin: 0px 0px 20px 30px !important; 
+	position: relative;
+	border: 1px solid transparent;
+	float: right;
+	z-index: 1;
+}
+.aligncenter {
+	margin: 0 auto 20px !important;
+	float: none !important;
+	z-index: 1;
+}
+.alignnone, .aligncenter {
+	position: relative;
+	border: 1px solid transparent;
+}
+h1 { 
+	position: relative;
+	margin-top: 0;
+}
+.edit-mode h1.printheadline:hover, .edit-mode .title-area:hover, .edit-mode .mini-logo-wrap:hover, .edit-mode .printbyline:hover {
+	cursor: default;
+	background: #eee;
+}
+.mini-logo-wrap {
+	max-width: 15%;
+	padding-right: 30px;
+	float: left;
+	margin-bottom: 30px;
+}
+.mini-logo {
+	width: 100%;
+	overflow: auto;
+}
+.title-area {
+	width: calc(85% - 30px);
+	float: right;
+	overflow: auto;
+	margin-bottom: 30px;
+}
+.print-mode .remove {
+	display: none !important;
+}
+.remove {
+	display: none;
+	position: absolute;
+	top: 3px; /* because of the border added to the p tag */
+	right: 3px;
+	min-height: 30px;
+	width: 30px;
+	border-radius: 3px;
+	background: #000;
+	color: #fff;
+	line-height: 30px;
+	z-index: 2;
+	text-align: center;
+}
+.remove i {
+	font-size: 15px;
+	line-height: 30px;
+	cursor: pointer;
+	text-align: center;
+}
+.edit-mode .story-body-wrapper p {
+	cursor: default;
+}
+.text-sizer {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	font-size: 10px;
+}
+.heading-sizer {
+	position: absolute;
+	right: 3px;
+	top: 3px;
+	font-size: 6px;
+}
+.image-buttons {
+	display:none;
+	position: absolute;
+	top: 3px;
+	right: 3px;
+	z-index: 2;
+	
+}
+.alignment-icon, .img-remove, .heading-icon {
+	float: left;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	background: #000;
+	color: #fff;
+	border-radius: 2px;
+	margin-left: 3px;
+	font-size: 15px;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+}
+.aligned {
+	opacity: .5;
+}
+.print-image {
+	break-inside: avoid;
+}
+.print-image img {
+	position: relative;
+	break-inside: avoid;
+}
+.resize {
+	position: absolute;
+	top: 100px;
+}
+.resize-left {
+	left: 10px;
+}
+.resize-right {
+	right: 10px;
+}
+.ui-resizable-w:before {
+	font-family: FontAwesome;
+	content: "\f30a";
+}
+.ui-resizable-w {
+	width: 30px;
+	height: 30px;
+	background: #000000;
+	color: #fff;
+	top: 50%;
+	border-radius: 2px; 
+	display:none !important;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	left: 3px;
+}
+.ui-resizable-e:before {
+	font-family: FontAwesome;
+	content: "\f30b";
+}
+.ui-resizable-e {
+	width: 30px;
+	height: 30px;
+	background: #000000;
+	color: #fff;
+	top: 50%;
+	border-radius: 2px; 
+	display:none !important;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	right: 3px;
+}
+.print-image:hover .ui-resizable-handle {
+	display: block !important;
+}
+.text-adjuster {
+	display: none;
+}
+.heading-buttons {
+	display: none;
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	z-index: 2;
+}
+.title-area .heading-buttons {
+	top: 0; 
+	right: 0;
+}
+.mini-logo-wrap .heading-buttons {
+	top: 0;
+	left: 0;
+	width: 50px;
+}
+.printbyline .heading-buttons {
+	top: 0;
+	left: 0;
+	width: 125px;
+}
+.title-area .action-left, .title-area .action-center, .title-area .header-increase, .title-area .header-decrease {
+	display: none !important;
+}
+.mini-logo-wrap .action-left, .mini-logo-wrap .action-center, .mini-logo-wrap .header-increase, .mini-logo-wrap .header-decrease {
+	display: none !important;
+}
+.printbyline .action-left, .printbyline .action-center {
+	display: none !important;
+}
+.aligntextleft {
+	text-align: left;
+}
+.aligntextcenter {
+	text-align: center;
+}
+.clear {
+	clear: both;
+}
+.icon-hidden-text {
+	display: none;
+}
+.ui-resizable-w, .ui-resizable-e {
+	position: absolute;
+}
+.story-body-wrapper .adredux {
+	display: none !important;
+}

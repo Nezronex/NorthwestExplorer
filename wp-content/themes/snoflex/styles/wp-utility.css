@@ -1,0 +1,25 @@
+img.sno-logo {
+	width: 100px;
+	margin: 100px auto 0;
+	display: block;
+}
+img.sno-rotate {
+	animation: rotation 3s infinite ease;
+	animation-direction: normal;
+}
+@keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+.import-text { text-align: center; margin-top: 100px; font-size: 24px; }
+.sno-text { margin-top: 30px; text-align: center; font-size: 22px; line-height: 30px; width: 100%; }
+.sno-notice { position: absolute; top: -70px; left: 0; right: 0; display: none; }
+form#loginform { position: relative; }
+form#loginform > * { opacity: 0; }
+.sno-login-expired { display: none; }
+.sno-login-expired img { margin: 10px auto 30px; }
+.sno-login-expired .expired-text { font-size: 16px; line-height: 28px; text-align: center; }
